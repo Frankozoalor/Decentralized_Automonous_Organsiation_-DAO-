@@ -36,11 +36,13 @@ import "@openzeppelin/contracts/access/Ownable.sol";
                     uint256 nayVotes;
                     // executed - whether or not this proposal has been executed yet. Cannot be executed before the deadline has been exceeded.
                     bool executed;
-                    // voters - a mapping of CryptoDevsNFT tokenIDs to booleans indicating whether that NFT has already been used to cast a vote or not
-                    mapping(uint256 => bool) voters;
+    
                    }   
+                   // voters - a mapping of CryptoDevsNFT tokenIDs to booleans indicating whether that NFT has already been used to cast a vote or not
+                 mapping(uint256 => bool) voters;
 
                  mapping(uint256 => Proposal) public proposals;
+                 
                  uint256 public numProposals;
 
                 IFakeNFTMarketplace nftMarketplace;
